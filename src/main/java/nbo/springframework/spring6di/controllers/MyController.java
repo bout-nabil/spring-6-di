@@ -17,4 +17,12 @@ public class MyController {
         System.out.println("I'm in MyController");
         return iGreetingService.getGreeting();
     }
+
+    public void beforeInitialization() {
+        System.out.println("## 8 beforeInitialization called by BeanPostProcessor");
+    }
+
+    public void afterInitialization() {
+        System.out.println("## 9 afterInitialization called by BeanPostProcessor");
+    }
 }
